@@ -99,6 +99,7 @@
             // 
             // txtResult
             // 
+            this.txtResult.Enabled = false;
             this.txtResult.Location = new System.Drawing.Point(269, 232);
             this.txtResult.Name = "txtResult";
             this.txtResult.Size = new System.Drawing.Size(100, 20);
@@ -112,6 +113,7 @@
             this.btnCalculate.TabIndex = 8;
             this.btnCalculate.Text = "&Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // btnExit
             // 
@@ -122,12 +124,14 @@
             this.btnExit.TabIndex = 9;
             this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Form1
             // 
             this.AcceptButton = this.btnCalculate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(562, 387);
             this.Controls.Add(this.btnExit);
@@ -141,7 +145,7 @@
             this.Controls.Add(this.lblOperator);
             this.Controls.Add(this.lblOperand1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Simple Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
