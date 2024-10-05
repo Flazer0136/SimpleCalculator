@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Simple Calculator Assignment by Sikanderdeep Singh Kingra
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace SimpleCalculator
 {
     public partial class Form1 : Form
     {
+        //To make sure the textboxes are not empty
         private bool IsPresent(string input)
         {
             return !string.IsNullOrWhiteSpace(input);
@@ -21,22 +24,17 @@ namespace SimpleCalculator
         {
             return decimal.TryParse(input, out _);
         }
-
+        //To check if the values entered are within the required range
         private bool IsWithinRange(decimal value)
         {
             return value >= 0 && value <= 1000000;
         }
-
+        //To make sure the operator entered is One of the defined ones
         private bool IsOperator(string input)
         {
             return input == "+" || input == "-" || input == "*" || input == "/";
         }
-
-        private bool IsValidOperation(decimal operand2, string operatorSymbol) // Updated parameter name
-        {
-            return !(operatorSymbol == "/" && operand2 == 0);
-        }
-
+        //Checks the validation of all the data entered by running previous defined methods
         private bool IsValidData()
         {
             if (!IsPresent(txtOperand1.Text) || !IsPresent(txtOperand2.Text) || !IsPresent(txtOperator.Text))
@@ -52,9 +50,6 @@ namespace SimpleCalculator
                 return false;
 
             if (!IsOperator(txtOperator.Text))
-                return false;
-
-            if (!IsValidOperation(operand2, txtOperator.Text)) // Updated parameter name
                 return false;
 
             return true;
@@ -94,12 +89,39 @@ namespace SimpleCalculator
                         result = operand1 / operand2;
                         break;
                 }
-
+                //Displays result
                 txtResult.Text = result.ToString();
+            }
+               //Exceptions used to catch specific errors
+            catch (FormatException ex)
+            {
+                MessageBox.Show("Please enter valid numeric values.\n" +
+                                "Error Type: " + ex.GetType().Name + "\n" +
+                                "Error Message: " + ex.Message,
+                                "Format Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (OverflowException ex)
+            {
+                MessageBox.Show("The number entered is too large or too small.\n" +
+                                "Error Type: " + ex.GetType().Name + "\n" +
+                                "Error Message: " + ex.Message,
+                                "Overflow Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (DivideByZeroException ex)
+            {
+                MessageBox.Show("Division by zero is not allowed.\n" +
+                                "Error Type: " + ex.GetType().Name + "\n" +
+                                "Error Message: " + ex.Message,
+                                "Division Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}\n{ex.GetType()}\n{ex.StackTrace}");
+                // General catch for any other exceptions
+                MessageBox.Show("An error occurred:\n" +
+                                "Error Type: " + ex.GetType().Name + "\n" +
+                                "Error Message: " + ex.Message + "\n" +
+                                "Stack Trace: " + ex.StackTrace,
+                                "Unknown Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -116,5 +138,17 @@ namespace SimpleCalculator
                 Application.Exit();
             }
         }
+
+        private void lblResult_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblOperand1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+

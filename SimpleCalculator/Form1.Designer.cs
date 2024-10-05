@@ -42,88 +42,98 @@
             // 
             // lblOperand1
             // 
-            this.lblOperand1.AutoSize = true;
-            this.lblOperand1.Location = new System.Drawing.Point(138, 114);
+            this.lblOperand1.BackColor = System.Drawing.Color.LightGray;
+            this.lblOperand1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOperand1.Location = new System.Drawing.Point(71, 54);
             this.lblOperand1.Name = "lblOperand1";
-            this.lblOperand1.Size = new System.Drawing.Size(60, 13);
+            this.lblOperand1.Size = new System.Drawing.Size(148, 50);
             this.lblOperand1.TabIndex = 0;
             this.lblOperand1.Text = "Operand 1:";
+            this.lblOperand1.Click += new System.EventHandler(this.lblOperand1_Click);
             // 
             // lblOperator
             // 
-            this.lblOperator.AutoSize = true;
-            this.lblOperator.Location = new System.Drawing.Point(141, 144);
+            this.lblOperator.BackColor = System.Drawing.Color.LightGray;
+            this.lblOperator.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOperator.Location = new System.Drawing.Point(71, 114);
             this.lblOperator.Name = "lblOperator";
-            this.lblOperator.Size = new System.Drawing.Size(51, 13);
+            this.lblOperator.Size = new System.Drawing.Size(148, 50);
             this.lblOperator.TabIndex = 1;
             this.lblOperator.Text = "Operator:";
             // 
             // lblOperand2
             // 
-            this.lblOperand2.AutoSize = true;
-            this.lblOperand2.Location = new System.Drawing.Point(141, 191);
+            this.lblOperand2.BackColor = System.Drawing.Color.LightGray;
+            this.lblOperand2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOperand2.Location = new System.Drawing.Point(71, 173);
             this.lblOperand2.Name = "lblOperand2";
-            this.lblOperand2.Size = new System.Drawing.Size(60, 13);
+            this.lblOperand2.Size = new System.Drawing.Size(148, 50);
             this.lblOperand2.TabIndex = 2;
             this.lblOperand2.Text = "Operand 2:";
             // 
             // lblResult
             // 
-            this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(141, 232);
+            this.lblResult.BackColor = System.Drawing.Color.LightGray;
+            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult.Location = new System.Drawing.Point(71, 232);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(40, 13);
+            this.lblResult.Size = new System.Drawing.Size(148, 50);
             this.lblResult.TabIndex = 3;
             this.lblResult.Text = "Result:";
+            this.lblResult.Click += new System.EventHandler(this.lblResult_Click);
             // 
             // txtOperand1
             // 
-            this.txtOperand1.Location = new System.Drawing.Point(269, 114);
+            this.txtOperand1.Location = new System.Drawing.Point(269, 60);
             this.txtOperand1.Name = "txtOperand1";
-            this.txtOperand1.Size = new System.Drawing.Size(100, 20);
+            this.txtOperand1.Size = new System.Drawing.Size(148, 20);
             this.txtOperand1.TabIndex = 4;
             // 
             // txtOperator
             // 
-            this.txtOperator.Location = new System.Drawing.Point(269, 144);
+            this.txtOperator.Location = new System.Drawing.Point(269, 120);
             this.txtOperator.Name = "txtOperator";
-            this.txtOperator.Size = new System.Drawing.Size(100, 20);
+            this.txtOperator.Size = new System.Drawing.Size(148, 20);
             this.txtOperator.TabIndex = 5;
             // 
             // txtOperand2
             // 
-            this.txtOperand2.Location = new System.Drawing.Point(269, 191);
+            this.txtOperand2.Location = new System.Drawing.Point(269, 179);
             this.txtOperand2.Name = "txtOperand2";
-            this.txtOperand2.Size = new System.Drawing.Size(100, 20);
+            this.txtOperand2.Size = new System.Drawing.Size(148, 20);
             this.txtOperand2.TabIndex = 6;
             // 
             // txtResult
             // 
             this.txtResult.Enabled = false;
-            this.txtResult.Location = new System.Drawing.Point(269, 232);
+            this.txtResult.Location = new System.Drawing.Point(269, 238);
             this.txtResult.Name = "txtResult";
-            this.txtResult.Size = new System.Drawing.Size(100, 20);
+            this.txtResult.Size = new System.Drawing.Size(148, 20);
             this.txtResult.TabIndex = 7;
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(144, 290);
+            this.btnCalculate.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalculate.Location = new System.Drawing.Point(86, 315);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(75, 23);
+            this.btnCalculate.Size = new System.Drawing.Size(110, 45);
             this.btnCalculate.TabIndex = 8;
             this.btnCalculate.Text = "&Calculate";
-            this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.UseVisualStyleBackColor = false;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // btnExit
             // 
+            this.btnExit.BackColor = System.Drawing.Color.OrangeRed;
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Location = new System.Drawing.Point(269, 290);
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(293, 315);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(110, 45);
             this.btnExit.TabIndex = 9;
             this.btnExit.Text = "E&xit";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Form1
@@ -133,7 +143,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(562, 387);
+            this.ClientSize = new System.Drawing.Size(473, 387);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.txtResult);
